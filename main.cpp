@@ -28,13 +28,9 @@ static void onMouse(int event, int x, int y, int flags, void*) {
 }
 
 int main() {
-    string filename = R"(C:\Users\Gabi\Desktop\ImageInpainting - Copy\figures.png)";
+    string filename = R"(C:\Users\Gabi\Desktop\ImageInpainting\Lincoln.jpg)";
     originalImage = imread(filename, IMREAD_COLOR);
-    resize(originalImage, originalImage, Size(960, 480));
-
-    cout << "You can specify the area to be inpainted by mouse and press i to initialise inpainting\n";
-    cout << "You can increase thickness of cursor by pressing + or decrease by pressing -\n";
-    cout << "After inpainting is done the result will be shown and saved as result.bmp\n";
+    resize(originalImage, originalImage, Size(640, 480));
 
     image = originalImage.clone();
     inpaintMask = Mat::zeros(image.size(), CV_8U);
