@@ -28,7 +28,7 @@ static void onMouse(int event, int x, int y, int flags, void*) {
 }
 
 int main() {
-    string filename = R"(C:\Users\Gabi\Desktop\ImageInpainting\Lincoln.jpg)";
+    string filename = R"(your_image_path)";
     originalImage = imread(filename, IMREAD_COLOR);
     resize(originalImage, originalImage, Size(640, 480));
 
